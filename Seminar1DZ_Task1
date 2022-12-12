@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+/*==============================================================================================
+ * 
+ * Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
+ * 
+ ==============================================================================================*/
+
+public class Seminar1_DZ_Task1 {
+    public static void main(String[] args) {
+        System.out.print("Введите положительное число n: ");
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        scan.close();
+        int countSum = 0;
+        int factorial = 1;
+        for (int i = 1; i < n + 1; i++) {
+            countSum += i;
+            factorial *= i;
+        }
+        System.out.println("n-ое треугольное число =: " + countSum);
+        System.out.println("факториал n =: " + factorial);
+    }
+}
